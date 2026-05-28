@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>화곡 셔츠룸 블로그 | 서버 웜업의 진실</title>
+  <meta name="description" content="서버 웜업의 기준을 깨부순다. 화곡 셔츠룸이 말하는 진짜 웜업의 조건. 규칙은 우리가 정한다.">
+  <meta name="keywords" content="화곡 셔츠룸, 서버 웜업, 마포 셔츠룸, 화곡동 셔츠, 서버 웜업 셔츠룸, 마포구 셔츠, 블로그">
+  <link rel="canonical" href="https://sf-t3-1779642675702-152.pages.dev/blog">
+  <meta name="bpaas-design-system" content="brutalist-avantgarde">
+  <meta name="bpaas-design-theme" content="kr-neon-void">
+  <meta property="og:title" content="화곡 셔츠룸 | 서버 웜업 블로그">
+  <meta property="og:description" content="규칙은 깨라고 있는 거다. 화곡 셔츠룸 블로그에서 웜업의 진실을 확인하라.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="화곡 셔츠룸 블로그">
+  <meta name="twitter:description" content="서버 웜업, 진짜 기준은 따로 있다.">
+  <style>
+    /* Brutalist Avant-Garde – kr-neon-void 테마 (완전 동일 유지) */
+    :root {
+      --bg: #0a0a0f;
+      --bg2: #14141c;
+      --fg: #e0e0e0;
+      --accent: #ff2e63;
+      --accent2: #00ffc3;
+      --border: #2a2a3a;
+      --font-mono: 'Courier New', Courier, monospace;
+      --font-sans: 'Arial Black', 'Impact', sans-serif;
+      --gutter: 1.5rem;
+      --card-bg: #111118;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 16px;
+    }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-mono);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* 전체 페이지 그리드 레이아웃 */
+    .page-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: var(--gutter);
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    /* 헤더 */
+    header {
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 0.75rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      font-family: var(--font-sans);
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    header h1 a {
+      color: inherit;
+      text-decoration: none;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    nav ul li a {
+      color: var(--fg);
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      padding: 0.25rem 0.5rem;
+      border: 2px solid transparent;
+      transition: 0.2s;
+    }
+    nav ul li a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    /* 메인 콘텐츠 */
+    main {
+      flex: 1;
+    }
+    /* 블로그 포스트 단일 컨텐츠 */
+    .blog-post {
+      background: var(--card-bg);
+      border: 2px solid var(--border);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .blog-post .post-header {
+      border-bottom: 2px dashed var(--accent2);
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .blog-post .post-header h2 {
+      font-family: var(--font-sans);
+      font-size: 1.75rem;
+      text-transform: uppercase;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+    .blog-post .post-header .date {
+      color: #888;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
+    .blog-post .post-body p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .blog-post .post-body p strong {
+      color: var(--accent2);
+    }
+    .blog-post .post-body .highlight-box {
+      background: #1a1a28;
+      border-left: 6px solid var(--accent);
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+    }
+    .blog-post .post-body ul {
+      list-style: square inside;
+      margin: 1rem 0;
+      padding-left: 1rem;
+    }
+    .blog-post .post-body ul li {
+      margin-bottom: 0.5rem;
+    }
+    .blog-post .post-body .cta-line {
+      font-family: var(--font-sans);
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 2rem 0 0.5rem;
+      color: var(--accent);
+    }
+    .blog-post .post-body .cta-phone {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 1.5rem;
+      text-align: center;
+      color: var(--accent2);
+      text-decoration: none;
+      margin-top: 0.25rem;
+      letter-spacing: 0.15em;
+    }
+    .blog-post .post-body .cta-phone:hover {
+      text-shadow: 0 0 12px var(--accent2);
+    }
+    /* 푸터 */
+    footer {
+      border-top: 3px solid var(--accent);
+      padding-top: 1rem;
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #666;
+    }
+    footer a {
+      color: var(--accent2);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    /* 반응형 */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+      nav ul {
+        gap: 0.75rem;
+      }
+      .blog-post {
+        padding: 1rem;
+      }
+      .blog-post .post-header h2 {
+        font-size: 1.3rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .page-wrap {
+        padding: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <!-- 헤더 (전체 페이지 공통) -->
+    <header>
+      <h1><a href="/">화곡 셔츠룸</a></h1>
+      <nav>
+        <ul>
+          <li><a href="/">홈</a></li>
+          <li><a href="/about">소개</a></li>
+          <li><a href="/blog">블로그</a></li>
+          <li><a href="/contact">연락처</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 메인 블로그 콘텐츠 (정보성 글 1편) -->
+    <main>
+      <article class="blog-post">
+        <div class="post-header">
+          <h2>서버 웜업의 진실: 당신이 잘못 알고 있는 3가지</h2>
+          <div class="date">2025.04.20 | by 화곡 셔츠룸 에디터</div>
+        </div>
+        <div class="post-body">
+          <p>서버 웜업. 업계에 만연한 거품이다. 대부분이 '분위기'와 '서비스'라는 이름으로 헛소리를 늘어놓지만, 진짜 웜업은 다른 데 있다. <strong>화곡 셔츠룸</strong>은 그 기준을 완전히 뒤집어엎었다.</p>
+
+          <p><strong>첫째, 시간의 신화를 깨라.</strong> “웜업은 적어도 10분은 걸린다”는 말은 구라다. 우리는 3초면 감동을 준다. 들어오는 순간 눈빛, 손끝의 각도, 첫 마디. 모든 게 압축되어 있다. 오래 끄는 게 능사가 아니다. <em>강렬함의 밀도</em>가 전부다.</p>
+
+          <div class="highlight-box">
+            “화곡에서 3초면 충분하다. 나머지는 당신이 경험으로 증명할 일이다.” — 마포 지역 베테랑
+          </div>
+
+          <p><strong>둘째, '규칙'은 고객을 위한 게 아니라 업소를 위한 것이다.</strong> 대부분 셔츠룸은 정해진 틀에 고객을 끼워 맞춘다. 하지만 진짜 웜업은 <strong>당신의 템포</strong>를 따른다. 우리는 메뉴판에 '화곡 룰'이라는 걸 따로 쓰지 않는다. 규칙은 대화로 정한다. 당신이 원하는 속도, 당신이 원하는 스타일. 우리는 그걸 읽어낸다.</p>
+
+          <ul>
+            <li><strong>속도:</strong> 빠르게? 느리게? 템포는 당신이 정한다.</li>
+            <li><strong>분위기:</strong> 묵직한 카리스마? 부드러운 친밀감? 둘 다 가능하다.</li>
+            <li><strong>연결:</strong> 서버와의 접점은 형식이 아니라 <em>리얼</em>이어야 한다.</li>
+          </ul>
+
+          <p><strong>셋째, 정보성 콘텐츠는 '진짜'여야 한다.</strong> 블로그에 쓰는 이 글도 마찬가지다. 화곡 셔츠룸은 거짓말하지 않는다. 우리가 말하는 '서버 웜업'은 물리적 준비가 아니라 <strong>정신적 각성</strong>이다. 당신이 기대하는 그 이상을, 형식이 아닌 본질로 채운다.</p>
+
+          <p>그래서 묻는다. 당신은 아직도 '보통'의 웜업에 만족하고 있는가? 그렇다면 화곡 셔츠룸이 그 기준을 부숴줄 준비가 되어 있다. 지금 전화하라. 상담은 무료다. 하지만 웜업은 절대 무료가 아니다. 그만한 가치를 걸고 있다.</p>
+
+          <div class="cta-line">지금 당장 규칙을 깨러 가자</div>
+          <a href="tel:010-6279-0862" class="cta-phone">010-6279-0862</a>
+        </div>
+      </article>
+    </main>
+
+    <!-- 푸터 (전체 페이지 공통) -->
+    <footer>
+      <p>© 2025 <a href="https://sf-t3-1779642675702-152.pages.dev">화곡 셔츠룸</a> — 마포 No.1 서버 웜업 | 규칙은 우리가 정한다.</p>
+      <p style="margin-top:0.25rem;">010-6279-0862 | 운영시간: 24/7 (예약제)</p>
+    </footer>
+  </div>
+</body>
+</html>
